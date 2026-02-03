@@ -6,7 +6,7 @@ const BagList = ({ cartItems }) => {
 
 
 
-  
+
   const dispatch = useDispatch();
 
   const handleRemove = (id) => {
@@ -21,7 +21,7 @@ const BagList = ({ cartItems }) => {
           <div key={item.id} className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 flex flex-col sm:flex-row gap-6 relative group">
             {/* Image */}
             <div className="w-full sm:w-32 h-32 shrink-0">
-              <img src={item.image} alt={item.title} className="w-full h-full object-cover rounded-md bg-gray-100" />
+              <img src={item.image} alt={item.title} className="w-full h-full object-contain rounded-md bg-gray-100" />
             </div>
 
             {/* Details */}
@@ -33,11 +33,11 @@ const BagList = ({ cartItems }) => {
                   </h3>
                   {/* <p className="text-sm text-gray-500 mt-1 uppercase">Seller: {item.company}</p> */}
                   {/* <p className='text-sm text-gray-500 mt-1 uppercase'>Delivery by {item.delivery_date}</p> */}
-                    <p className='text-sm text-gray-500 mt-1 uppercase'>{item.category}</p>
+                  <p className='text-sm text-gray-500 mt-1 uppercase'>{item.category}</p>
                 </div>
                 <p className="font-bold text-xl">${item.price}
                   {/* {item.original_price && ( */}
-                    {/* <span className="text-sm text-gray-400 line-through">₹{item.original_price}</span> */}
+                  {/* <span className="text-sm text-gray-400 line-through">${item.original_price}</span> */}
                   {/* )} */}
                 </p>
 

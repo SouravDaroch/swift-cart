@@ -32,18 +32,18 @@ const OrderSummary = () => {
           <div className="space-y-4 text-sm border-b pb-4">
             <div className="flex justify-between">
               <span className="text-gray-600">Total MRP</span>
-              <span className="text-gray-900 font-medium">₹{totalMRP}</span>
+              <span className="text-gray-900 font-medium">${totalMRP}</span>
             </div>
             {/* <div className="flex justify-between"> */}
-              {/* <span className="text-gray-600">Discount on MRP</span> */}
-              {/* <span className="text-green-600 font-medium">-₹{totalDiscount}</span> */}
+            {/* <span className="text-gray-600">Discount on MRP</span> */}
+            {/* <span className="text-green-600 font-medium">-${totalDiscount}</span> */}
             {/* </div> */}
 
 
             <div className="flex justify-between">
               <span className="text-gray-600">Convenience Fee</span>
               <span className="text-gray-900 font-medium">
-                {finalItems.length > 0 ? `₹${CONVENIENCE_FEES}` : '₹0'}
+                {finalItems.length > 0 ? `$${CONVENIENCE_FEES}` : '$0'}
               </span>
             </div>
             <div className="flex justify-between">
@@ -58,7 +58,7 @@ const OrderSummary = () => {
 
           <div className="flex justify-between items-center py-4 mb-4">
             <span className="text-lg font-bold text-gray-900">Total Amount</span>
-            <span className="text-lg font-bold text-gray-900">₹{finalPayment}</span>
+            <span className="text-lg font-bold text-gray-900">${finalPayment}</span>
           </div>
 
           <button className="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 rounded uppercase tracking-wider transition-all shadow-md">
