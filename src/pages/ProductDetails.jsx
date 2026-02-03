@@ -26,7 +26,7 @@ const ProductDetail = () => {
     if (!product) return <div className="text-center py-20 text-xl font-bold">Product not found!</div>;
 
     return (
-        <main className="max-w-7xl mx-auto px-4 py-8 md:py-16">
+        <main className="max-w-7xl mx-auto px-10 py-8 md:py-16">
             {/* Back Button */}
             <Link to="/" className="flex items-center gap-2 text-gray-500 hover:text-gray-800 mb-8 transition-colors">
                 <ArrowLeft size={20} /> Back to Products
@@ -38,12 +38,12 @@ const ProductDetail = () => {
                     <img
                         src={product.image}
                         alt={product.title}
-                        className="w-90 mx-auto h-auto object-cover hover:scale-105 transition-transform duration-500"
+                        className="w-90 mx-auto h-70 md:h-auto object-contain hover:scale-105 transition-transform duration-500"
                     />
                 </section>
 
                 {/* Right: Product Info */}
-                <section className="flex flex-col">
+                <section className="flex flex-col p-2">
                     <span className="text-blue-600 font-bold tracking-widest text-sm uppercase mb-2">
                         {product.category}
                     </span>
