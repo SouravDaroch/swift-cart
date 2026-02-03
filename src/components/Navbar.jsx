@@ -1,7 +1,8 @@
-import { ShoppingCart, User, Search, Menu, Home } from 'lucide-react'; // Added Home icon
+import { ShoppingCart, User, Search, Menu, Home } from 'lucide-react'; 
 import { Link } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
-import { setSearchTerm } from "../store/searchSlice"; // Ensure path is correct
+import { setSearchTerm } from "../store/searchSlice"; 
+import logo from '/Logo.png';
 
 const Navbar = () => {
   const bag = useSelector((store) => store.bag);
@@ -22,7 +23,7 @@ const Navbar = () => {
           <Link to={"/"} onClick={handleHomeClick}>
             <div className="flex items-center">
               <div className='w-12 h-12'>
-                <img src="./src/assets/Logo.png" alt="SwiftCart Logo" />
+                <img src={logo} alt="SwiftCart Logo" />
               </div>
               <div className='hidden md:flex font-bold items-center text-3xl text-gray-800'>
                 <span className='tracking-tighter m-1'>Swift</span>
